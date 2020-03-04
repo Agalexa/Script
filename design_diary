@@ -1,11 +1,16 @@
 Scripting journal - Drew Alexandrescu
 
 
-I really enjoyed this project and I feel like I've come a long way in my understanding of gnerally what a script is as well as how they actually can be executed. It was also cool learning more about the inner workings of different API's. API was always a word I'd hear around in tech circles but I never quite actually understood what one did, so it was really cool to actually be able to work with some API's to actually achieve a task (retrieving currency pricing) 
+I really enjoyed this project and I feel like I've come a long way in my understanding of gnerally what a script is as well as how they actually can be executed. 
+It was also cool learning more about the inner workings of different API's. API was always a word I'd hear around in tech circles but I never quite actually understood 
+what one did, so it was really cool to actually be able to work with some API's to actually achieve a task (retrieving currency pricing) 
 
-I also learned about how information is exchanged on the web and how a lot of the time these requests are serviced with JSON files. It was cool to see how python can so easily interact with JSON to extract/add data you want.  On top of this I also learned more intricately how dictionaries work in python and how the "values" can be accessed with the use of the dictionary "keys". This technique was essential in interacting with the JSON files. 
+I also learned about how information is exchanged on the web and how a lot of the time these requests are serviced with JSON files. It was cool to see how python 
+can so easily interact with JSON to extract/add data you want.  On top of this I also learned more intricately how dictionaries work in python and how the "values"
+can be accessed with the use of the dictionary "keys". This technique was essential in interacting with the JSON files. 
 
-What I probably struggled with the most is figuring out how to accurately keep track of the passing of time intervals in my program. I couldn't seem to get it working 100 percent correctly. It works but it's a few seconds off. It seems like the requests being sent to the web APIs for my data were causing a delay.
+What I probably struggled with the most is figuring out how to accurately keep track of the passing of time intervals in my program. I couldn't seem to get it working 100 percent correctly. 
+It works but it's a few seconds off. It seems like the requests being sent to the web APIs for my data were causing a delay.
 
 Bitcoin price script
 
