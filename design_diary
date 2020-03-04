@@ -1,0 +1,56 @@
+Scripting journal - Drew Alexandrescu
+
+
+I really enjoyed this project and I feel like I've come a long way in my understanding of gnerally what a script is as well as how they actually can be executed. It was also cool learning more about the inner workings of different API's. API was always a word I'd hear around in tech circles but I never quite actually understood what one did, so it was really cool to actually be able to work with some API's to actually achieve a task (retrieving currency pricing) 
+
+I also learned about how information is exchanged on the web and how a lot of the time these requests are serviced with JSON files. It was cool to see how python can so easily interact with JSON to extract/add data you want.  On top of this I also learned more intricately how dictionaries work in python and how the "values" can be accessed with the use of the dictionary "keys". This technique was essential in interacting with the JSON files. 
+
+What I probably struggled with the most is figuring out how to accurately keep track of the passing of time intervals in my program. I couldn't seem to get it working 100 percent correctly. It works but it's a few seconds off. It seems like the requests being sent to the web APIs for my data were causing a delay.
+
+Bitcoin price script
+
+API - What is an API and how is it used in my bitcoin script?
+
+So an API stands for "applicaiton protocal interface" and what it basically is a software that faciliates communication between two parties i.e. an "interface protocal"
+
+	- In this assignment I will be using web based API's to pull data about bitcoin and other currency prices.
+
+So an API faciliates the information exchange, but how is that data transmitted?
+
+Often times, a JSON (JavaScript Object Notation) format is used to actually submit data to GET requests.
+
+What is a request?
+
+Python has a library called "requests" that is used to interact with HTTP.
+It is designed for ease of use when using HTTP requests.
+
+	the format
+	import requests
+	r = requests.get('URL')
+	r = r.json()
+
+I'm currently struggling to get the data in my JSON file that I pulled from my api. When I try to access a specific point of data, I keep getting errors like "key error"
+
+I figured out the problem, python was not interacting correctly with the dictionary of items in my json file, I essentially was not able to access a dictionary within a dictionary  because my dictionary keys were so I solved it by creating a second dictionary.
+
+"r = requests.get('http://data.fixer.io/api/latest?access_key=d6837361bdbaafc52c41865cb3c286f9')
+data = [r.json()]
+dicty = data[0]['rates']
+
+print (dicty['CAD'])
+
+>>> gets canadian conversion rate. 
+
+Learning  about the specific differences between lists, arrays, and dictionaries.
+"A dictionary is a key:value pair, similar to an associative array found in other programming languages" 
+
+the functionality of a dictionary is cool, how you have a "key" to search with and a "value"  print (dictionary['KEY']) >>> "VALUE"
+
+Using time module to keep track of time in my program. I want to provide repeated time updates at certain intervals
+
+Ive been stuck for a while trying to figure out how to pass time the best time and I've decided to just go with time.sleep(), it's not perfect but itll work
+
+decided to go with a different technique using a while loop
+referenced a the book "automate the boring stuff with python"
+and it had a very useful part about setting up a "try exempt loop" that I can use to exit my program.
+
